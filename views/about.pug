@@ -1,0 +1,8 @@
+//- The below line tells the engine to use the main-layout file
+extends layouts/main-layout.pug
+block content
+    p This content is from about.pug!
+    p About my cool site!
+    //- Here we are using the user-form mixin and giving it a class of 'modal'
+    //- We have access to this because the mixin file was included in main-layout
+    +user-form()(class='modal')

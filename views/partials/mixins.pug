@@ -1,0 +1,5 @@
+//- DECLARE our mixin - use the 'class' attribute if one is passed in
+mixin user-form
+    form(action="/", method="post" class!=attributes.class)
+        input#user-email(type="email", name="user-email")
+        button(type="submit") Submit

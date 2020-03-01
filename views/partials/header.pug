@@ -1,0 +1,11 @@
+//- We're going to include this in our main-layout file so it will be on
+//- any page that extends that layout
+header
+    nav
+        ul
+            li 
+                a(href="/") Home
+            li
+                a(href="/about") About
+    //- Use the syntax below to access data passed in from index.js
+    h1 This page title is coming from header.pug -- #{ title }

@@ -1,0 +1,19 @@
+//- Include our mixin file to be used anywhere that extends this layout
+include ../partials/mixins
+<!DOCTYPE html>
+html(lang="en")
+    head
+        //- Use the syntax below to grab data passed in from index.js
+        title #{ title }
+    body
+        //- Include the content in our header partial
+        include ../partials/header
+        //- The content below will be filled in by pages that extend this page
+        block content
+        section
+            h2 This h2 is also from the layout
+            //- Interating over the array passed in from index.js
+            for user in userNames
+                include ../partials/user.pug
+        //- The content below will be filled in by pages that extend this page
+        block more_content

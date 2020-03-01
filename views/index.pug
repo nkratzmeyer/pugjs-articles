@@ -1,0 +1,19 @@
+//- Use the main-layout file 
+extends layouts/main-layout.pug
+
+//- Fill in the 'content' named block in main-layout.pug
+block content
+    //- 'licensedToKill' is a variable passed in from index.js
+    //- we can use it for conditional logic
+    if licensedToKill
+        p Bond is licensed to kill!
+    else
+        p Bond is NOT licensed to kill!
+//- Fill in the 'more_content' named block in main-layout.pug
+block more_content
+    //- 'bestMovie' is a variable passed in from index.js
+    //- below illustrates different usages
+    p The best movie is #{ bestMovie }
+    p= bestMovie
+    //- here we are using our user-form mixin and not giving it a class attribute
+    +user-form
